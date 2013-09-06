@@ -1,0 +1,38 @@
+{% extends 'MsiAdminBundle:Page:layout.html.twig' %}
+
+{% block css %}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ asset('bundles/vorcore/css/style.css') }}">
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="header">
+        <p><a href="{{ path('homepage') }}"><img src="{{ asset('uploads/images/logo.png') }}" alt="0"></a></p>
+        <div class="menu-container">
+            <div class="menu-wrap">
+                {{ knp_menu_render('VorCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="nicebox">
+            <h2>{{ block('title') }}</h2>
+            {{ block('page_content') }}
+        </div>
+    </div>
+    <div class="footer">
+        <small>&copy; {{ 'now'|date('Y') }} O.M.U. IMPORT/EXPORT</small>
+    </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+{% endblock %}

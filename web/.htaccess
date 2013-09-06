@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    #<IfModule mod_vhost_alias.c>
+    #    RewriteBase /
+    #</IfModule>
+
+    RewriteCond %{HTTP_HOST} ^lorem\.zonemsi\.com$ [NC]
+    RewriteRule ^(.*)$ http://www.lorem.zonemsi.com/$1 [R=301,L]
+
+    RewriteCond %{HTTP_HOST} ^www\.lorem\.zonemsi\.com$ [NC]
+    RewriteRule ^$ http://www.lorem.zonemsi.com/fr/ [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ app.php [QSA,L]
+</IfModule>

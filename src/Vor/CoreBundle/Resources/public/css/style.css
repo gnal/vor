@@ -1,0 +1,82 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: url(/uploads/images/bg.png) center center;
+    color: #000;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 970px;
+}
+
+.header {
+    background: #000;
+    text-align: center;
+    padding: 10px 10px 0;
+    position: relative;
+}
+
+.content {
+    background: #000;
+    padding: 10px;
+}
+
+.footer {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.nicebox {
+    background: #999933;
+    padding: 20px;
+}
+
+.text-success {
+    color: #004000;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.menu-container {
+    background: #4e5811;
+    padding: 10px;
+}
+
+.menu-wrap {
+    float:right;
+    position: relative;
+    left: -50%;
+}
+
+.menu {
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    float: left;
+}
+
+.menu > li > a {
+    display: block;
+    background: #000;
+    padding: 10px 20px;
+    color: #fff;
+    margin: 0 5px;
+}

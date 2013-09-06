@@ -1,0 +1,7 @@
+parameters:
+#    vor_user.example.class: Vor\UserBundle\Example
+
+services:
+#    vor_user.example:
+#        class: %vor_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
