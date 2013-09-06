@@ -1,3 +1,7 @@
+msi_store:
+    resource: "@MsiStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
 vor_core:
     resource: "@VorCoreBundle/Resources/config/routing.yml"
     prefix:   /

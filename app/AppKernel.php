@@ -28,10 +28,13 @@ class AppKernel extends Kernel
             new Msi\CmsBundle\MsiCmsBundle(),
             new Msi\UserBundle\MsiUserBundle(),
 
+            new Msi\StoreBundle\MsiStoreBundle(),
+
             new Acme\AppBundle\AcmeAppBundle(),
             new Vor\CoreBundle\VorCoreBundle(),
             new Vor\UserBundle\VorUserBundle(),
             new Vor\CmsBundle\VorCmsBundle(),
+            new Vor\StoreBundle\VorStoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

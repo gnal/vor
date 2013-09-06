@@ -85,3 +85,6 @@ msi_cms:
     page_class: Vor\CmsBundle\Entity\Page
     page_layouts:
         'VorCoreBundle::layout.html.twig': 'Default'
+
+msi_store:
+    product_class: Vor\StoreBundle\Entity\Product

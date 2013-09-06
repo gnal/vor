@@ -5,8 +5,7 @@ html {
 body {
     background: url(/uploads/images/bg.png) center center;
     color: #000;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .container {
@@ -45,8 +44,9 @@ h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    text-align: center;
-    margin-top: 0;
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #000;
 }
 
 .menu-container {
