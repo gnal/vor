@@ -24,6 +24,9 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
         $user = $userManager->createUser();
         $user
             ->setUsername('manager@zonemsi.com')
+            ->setFirstName('jean')
+            ->setLastName('michel')
+            ->setCity('mtl')
             ->setEmail('manager@zonemsi.com')
             ->setPlainPassword('admin')
             ->setConfirmationToken(null)
