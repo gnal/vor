@@ -38,7 +38,7 @@ msi_admin_loader:
     type: msi_admin
 
 msi_admin:
-    resource: "@MsiAdminBundle/Resources/config/routing/routing.yml"
+    resource: "@MsiAdminBundle/Resources/config/routing.yml"
     prefix: /
 
 msi_cms:
