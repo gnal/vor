@@ -1,0 +1,24 @@
+entity:
+    Cart: Cart|Carts
+    ProductCategory: Catégorie|Catégories
+    Product: Produit|Produits
+    ProductImage: Images|Images
+    CartStatus: Status|Statuses
+
+# cart admin
+
+Shippingname: Livrer à
+Billingname: Facturer à
+Frozenat: Date
+Id: "#"
+Language: Langage
+
+# product admin
+
+Discountedprice: Spécial
+Discountedfrom: Spécial du
+Discountedto: Spécial au
+Imagefile: Image
+Category: Catégorie
+Price: Prix
+Discount: Spécial

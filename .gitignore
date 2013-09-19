@@ -9,4 +9,3 @@
 /web/uploads/*
 app/SymfonyRequirements.php
 composer.lock
-/src/Msi/
