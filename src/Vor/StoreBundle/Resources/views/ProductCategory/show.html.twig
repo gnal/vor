@@ -1,0 +1,20 @@
+{% extends 'VorCoreBundle::layout.html.twig' %}
+
+{% block title %}{{ category }}{% endblock %}
+
+{% block content %}
+{% for child in category.children %}
+    {% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
+        <div class="col-md-6">
+            <a class="media well well-sm" href="{{ path('msi_store_product_index', {'category': child.id}) }}">
+                <img class="pull-left media-object" alt="0" src="http://placekitten.com/64/64" style="width: 64px; height: 64px;">
+                <div class="media-body">
+                    {#<h4 class="media-heading"><a href="#">{{ child }}</a></h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at.#}
+                    {{ child }}
+                </div>
+            </a>
+        </div>
+    {% if loop.index == category.children|length or loop.index % 2 == 0 %}</div>{% endif %}
+{% endfor %}
+{% endblock %}

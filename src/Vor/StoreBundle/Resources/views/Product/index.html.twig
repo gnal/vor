@@ -10,25 +10,25 @@
 <li><a href="#">5</a></li>
 <li><a href="#">»</a></li>
 </ul>
+
 <div class="clearfix"></div>
 {% for product in products %}
-{% if loop.index == 1 or loop.index % 4 == 1 %}<div class="row">{% endif %}
-    <div class="col-md-3">
-        <a href="#" class="blackbox">
-            <div class="text-center">
-                <img style="width: 100%;" src="http://vor1945.com/img/books/photos/4d938041dbb46.jpg" alt="0">
-            </div>
-            <div class="blackbox-body">
+{% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
+    <div class="col-md-6">
+        <a class="media well well-sm" href="#">
+            <img class="pull-left media-object" alt="0" src="http://placekitten.com/64/64" style="width: 64px; height: 64px;">
+            <div class="media-body">
                 NDA #{{ product.id }}
                 <br>
-                {{ product.translations.0.name|truncate(20) }}
+                {{ product.translation.name|truncate(20) }}
                 <br>
                 ${{ product.price }}
             </div>
         </a>
     </div>
-{% if loop.index == products|length or loop.index % 4 == 0 %}</div>{% endif %}
+{% if loop.index == products|length or loop.index % 2 == 0 %}</div>{% endif %}
 {% endfor %}
+
 <ul class="pagination" style="margin-bottom: 0;">
 <li class="disabled"><a href="#">«</a></li>
 <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
@@ -42,4 +42,8 @@
 {% endblock %}
 
 
-{% block title %}{{ category }}{% endblock %}
+{% block title %}{{ category ?: 'Products' }}{% endblock %}
+
+{% block sidebar %}
+{{ render(url('msi_store_productcategory_nav', {'category': app.request.query.get('category')})) }}
+{% endblock %}

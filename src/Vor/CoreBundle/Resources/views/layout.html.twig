@@ -1,9 +1,10 @@
 {% extends 'MsiAdminBundle:Page:layout.html.twig' %}
 
 {% block css %}
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="{{ asset('bundles/msiadmin/vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('bundles/msiadmin/vendor/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ asset('bundles/msiadmin/css/base.css') }}">
 <link rel="stylesheet" href="{{ asset('bundles/vorcore/css/style.css') }}">
 {{ parent() }}
 {% endblock %}
@@ -22,7 +23,20 @@
     <div class="content">
         <div class="nicebox">
             <h2>{{ block('title') }}</h2>
-            {{ block('page_content') }}
+            {% if block('sidebar') %}
+                <div class="row">
+                    <div class="col-md-8">
+                        {{ block('page_content') }}
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sidebar well well-sm">
+                            {{ block('sidebar') }}
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                {{ block('page_content') }}
+            {% endif %}
         </div>
     </div>
     <div class="footer">
@@ -34,5 +48,6 @@
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="{{ asset('bundles/msiadmin/vendor/hinclude/hinclude.js') }}"></script>
+<script src="{{ asset('bundles/msiadmin/vendor/bootstrap/js/bootstrap.js') }}"></script>
 {% endblock %}

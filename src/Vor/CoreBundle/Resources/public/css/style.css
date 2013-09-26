@@ -1,14 +1,31 @@
-html {
-    overflow-y: scroll;
-}
-
 body {
     background: url(/uploads/images/bg.png) center center;
     color: #000;
 }
 
-.container {
-    max-width: 970px;
+h2, h3, h4, h5, h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #fff;
+}
+
+h2 {
+    margin: 10px 0 20px;
+    padding: 0 0 5px;
+    font-size: 24px;
+    border-bottom: 3px solid #000;
+}
+
+a {
+    color: #8e0c0c;
+}
+
+a:hover {
+    color: #8e0c0c;
+    text-decoration: underline;
+}
+
+.white {
+    color: #fff !important;
 }
 
 .header {
@@ -30,8 +47,8 @@ body {
 }
 
 .nicebox {
-    background: #999933;
-    padding: 20px;
+    background: #4e5811;
+    padding: 10px;
     border-radius: 4px;
 }
 
@@ -56,16 +73,6 @@ body {
 
 .text-success {
     color: #004000;
-}
-
-h2, h3, h4, h5, h6 {
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-h2 {
-    margin: 0 0 20px;
-    padding: 0 0 10px;
-    border-bottom: 1px solid #000;
 }
 
 .menu-container {
@@ -128,4 +135,39 @@ h2 {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
     background-color: #8e0c0c;
+}
+
+a.media {
+    display: block;
+}
+
+.sidebar {
+/*    background: #000;
+    padding: 15px;*/
+}
+
+.sidebar h4 {
+    font-size: 18px;
+    margin: 0 0 20px;
+
+    padding-bottom: 10px;
+    border-bottom: 2px solid #999;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.well {
+    background: #000;
+    border-color: #8e0c0c;
+    color: #999;
+}
+
+.well:hover {
+    color: #999;
+    text-decoration: none;
 }
