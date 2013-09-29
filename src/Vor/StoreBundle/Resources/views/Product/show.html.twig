@@ -1,0 +1,43 @@
+{% extends 'VorCoreBundle::layout.html.twig' %}
+
+{% block content %}
+<p class="lead"><strong>Item: NDA #{{ product.id }}</strong></p>
+{{ product.translation.content|raw }}
+<p class="lead"><strong>Price: ${{ product.price }}</strong></p>
+<hr>
+<div class="row">
+    <div class="col-md-6">
+        <p><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></p>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block title %}{{ product }}{% endblock %}
+
+{% block sidebar %}
+{{ render(url('msi_store_productcategory_nav', {'category': app.request.query.get('category')})) }}
+{% endblock %}

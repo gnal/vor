@@ -4,8 +4,8 @@
 
 {% block content %}
 {% for child in category.children %}
-    {% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
-        <div class="col-md-6">
+    {#{% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}#}
+        {#<div class="col-md-6">#}
             <a class="media well well-sm" href="{{ path('msi_store_product_index', {'category': child.id}) }}">
                 <img class="pull-left media-object" alt="0" src="http://placekitten.com/64/64" style="width: 64px; height: 64px;">
                 <div class="media-body">
@@ -14,7 +14,9 @@
                     {{ child }}
                 </div>
             </a>
-        </div>
-    {% if loop.index == category.children|length or loop.index % 2 == 0 %}</div>{% endif %}
+        {#</div>#}
+    {#{% if loop.index == category.children|length or loop.index % 2 == 0 %}</div>{% endif %}#}
 {% endfor %}
 {% endblock %}
+
+{% block sidebar %}da{% endblock %}

@@ -1,26 +1,35 @@
 body {
     background: url(/uploads/images/bg.png) center center;
-    color: #000;
+    color: #a99877;
+    /*color: #98a977;*/
+    /*color: #7798a9;*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+    border-color: #0e0d0c;
 }
 
 h2, h3, h4, h5, h6 {
     font-family: Georgia, "Times New Roman", Times, serif;
-    color: #fff;
+    color: #F3E6D0;
+    /*color: #e6f3d0;*/
+    /*color: #d0e6f3;*/
 }
 
 h2 {
     margin: 10px 0 20px;
     padding: 0 0 5px;
     font-size: 24px;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #0e0d0c;
 }
 
 a {
-    color: #8e0c0c;
+    color: #d96500;
 }
 
 a:hover {
-    color: #8e0c0c;
+    color: #d96500;
     text-decoration: underline;
 }
 
@@ -29,27 +38,44 @@ a:hover {
 }
 
 .header {
-    background: #000;
+    background: #12110f;
     text-align: center;
     padding: 10px 10px 0;
     position: relative;
 }
 
 .content {
-    background: #000;
+    background: #12110f;
     padding: 10px;
 }
 
+.content-inner {
+    background: #222120;
+    /*background: #40420E;*/
+    padding: 10px;
+    border-radius: 4px;
+
+    border: 1px solid transparent;
+    border-color: #080808;
+}
+
 .footer {
-    color: #fff;
+    color: #bbb;
     padding: 10px;
     text-align: center;
 }
 
-.nicebox {
-    background: #4e5811;
-    padding: 10px;
-    border-radius: 4px;
+.navbar-inverse {
+    background: #40420E;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #bbb;
+}
+
+.navbar .form-control {
+    background: #000;
+    border-color: #444;
 }
 
 .blackbox {
@@ -148,11 +174,9 @@ a.media {
 
 .sidebar h4 {
     font-size: 18px;
-    margin: 0 0 20px;
-
+    margin: 10px 0 10px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #999;
-    color: #999;
+    border-bottom: 3px solid #333;
     text-transform: uppercase;
 }
 
@@ -162,12 +186,45 @@ a.media {
 }
 
 .well {
-    background: #000;
-    border-color: #8e0c0c;
-    color: #999;
+    background: #0e0d0c;
+    border-color: #443312;
+    color: #a99877;
 }
 
-.well:hover {
-    color: #999;
+a.well:hover {
+    color: #a99877;
     text-decoration: none;
+    border-color: #776645;
+}
+
+.box-img {
+    display: block;
+    background: #0e0d0c;
+    border: 1px solid #443312;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.box-img img {
+    border-radius: 4px;
+}
+
+a.box-img:hover {
+    border-color: #776645;
+}
+
+.btn-metal {
+    color: #000;
+    background-color: #444;
+    border-color: #000;
+}
+
+.btn-metal:hover,
+.btn-metal:focus,
+.btn-metal:active,
+.btn-metal.active,
+.open .dropdown-toggle.btn-metal {
+    color: #000;
+    background-color: #444;
+    border-color: #000;
 }

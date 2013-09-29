@@ -11,7 +11,7 @@ class MenuBuilder extends BaseMenuBuilder
     {
         $menu = $this->getMenu('main');
 
-        $menu->setChildrenAttribute('class', 'menu');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav');
 
         return $this->execute($menu);
     }
