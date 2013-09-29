@@ -65,5 +65,5 @@
 {% block title %}{{ category ?: 'Products' }}{% endblock %}
 
 {% block sidebar %}
-{{ render(url('msi_store_productcategory_nav', {'category': app.request.query.get('category')})) }}
+{{ render(url('msi_store_productcategory_nav')) }}
 {% endblock %}

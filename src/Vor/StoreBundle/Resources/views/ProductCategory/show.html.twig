@@ -11,7 +11,14 @@
                 <div class="media-body">
                     {#<h4 class="media-heading"><a href="#">{{ child }}</a></h4>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at.#}
-                    {{ child }}
+                    <div class="row">
+                        <div class="col-md-10">
+                            <p>{{ child }}</p>
+                        </div>
+                        <div class="col-md-2">
+                            <p class="lead text-center">{{ child.products.count }}</p>
+                        </div>
+                    </div>
                 </div>
             </a>
         {#</div>#}
@@ -19,4 +26,6 @@
 {% endfor %}
 {% endblock %}
 
-{% block sidebar %}da{% endblock %}
+{% block sidebar %}
+{{ render(url('msi_store_productcategory_nav')) }}
+{% endblock %}

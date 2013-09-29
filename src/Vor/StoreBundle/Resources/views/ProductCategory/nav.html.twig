@@ -1,6 +1,13 @@
 <h4>Categories</h4>
 <ul class="list-unstyled">
-{% for child in category.parent.children %}
+{% for child in category.children %}
     <li><a href="{{ path('msi_store_product_index', {'category': child.id}) }}">{{ child|truncate(30) }}</a></li>
+    {% if child.children|length %}
+        <li><ul class="list-unstyled" style="padding-left: 10px;">
+        {% for item in child.children %}
+            <li><a href="{{ path('msi_store_product_index', {'category': item.id}) }}">{{ item|truncate(30) }}</a></li>
+        {% endfor %}
+        </ul></li>
+    {% endif %}
 {% endfor %}
 </ul>
