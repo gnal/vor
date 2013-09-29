@@ -1,24 +1,54 @@
 {% extends 'VorCoreBundle::layout.html.twig' %}
 
 {% block content %}
-<div class="clearfix"></div>
 {% for product in products %}
-{% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
-    <div class="col-md-6">
-        <a class="media well well-sm" href="{{ path('msi_store_product_show', {'category': app.request.query.get('category'), 'product': product.id}) }}">
-            <img class="pull-left media-object" alt="0" src="http://placekitten.com/g/64/64" style="width: 64px; height: 64px;">
-            <div class="media-body">
-                NDA #{{ product.id }}
-                <br>
-                {{ product.translation.name|truncate(20) }}
-                <br>
-                ${{ product.price }}
-            </div>
-        </a>
-    </div>
-{% if loop.index == products|length or loop.index % 2 == 0 %}</div>{% endif %}
+    {% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
+        <div class="col-md-6">
+            <a class="media well well-sm" href="{{ path('msi_store_product_show', {'category': app.request.query.get('category'), 'product': product.id}) }}">
+                <img class="pull-left media-object" alt="0" src="{{ product.images|length ? product.images.first.pathname('filename', '2') : 'http://placekitten.com/g/64/64' }}" style="width: 64px; height: 64px;">
+                <div class="media-body">
+                    NDA #{{ product.id }}
+                    <br>
+                    {{ product.translation.name|truncate(20) }}
+                    <br>
+                    ${{ product.price }}
+                </div>
+            </a>
+        </div>
+    {% if loop.index == products|length or loop.index % 2 == 0 %}</div>{% endif %}
 {% endfor %}
-
+{% for product in products %}
+    {% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
+        <div class="col-md-6">
+            <a class="media well well-sm" href="{{ path('msi_store_product_show', {'category': app.request.query.get('category'), 'product': product.id}) }}">
+                <img class="pull-left media-object" alt="0" src="{{ product.images|length ? product.images.first.pathname('filename', '2') : 'http://placekitten.com/g/64/64' }}" style="width: 64px; height: 64px;">
+                <div class="media-body">
+                    NDA #{{ product.id }}
+                    <br>
+                    {{ product.translation.name|truncate(20) }}
+                    <br>
+                    ${{ product.price }}
+                </div>
+            </a>
+        </div>
+    {% if loop.index == products|length or loop.index % 2 == 0 %}</div>{% endif %}
+{% endfor %}
+{% for product in products %}
+    {% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
+        <div class="col-md-6">
+            <a class="media well well-sm" href="{{ path('msi_store_product_show', {'category': app.request.query.get('category'), 'product': product.id}) }}">
+                <img class="pull-left media-object" alt="0" src="{{ product.images|length ? product.images.first.pathname('filename', '2') : 'http://placekitten.com/g/64/64' }}" style="width: 64px; height: 64px;">
+                <div class="media-body">
+                    NDA #{{ product.id }}
+                    <br>
+                    {{ product.translation.name|truncate(20) }}
+                    <br>
+                    ${{ product.price }}
+                </div>
+            </a>
+        </div>
+    {% if loop.index == products|length or loop.index % 2 == 0 %}</div>{% endif %}
+{% endfor %}
 {#<ul class="pagination" style="margin-bottom: 0;">
 <li class="disabled"><a href="#">«</a></li>
 <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>

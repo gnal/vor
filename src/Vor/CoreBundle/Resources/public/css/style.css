@@ -1,5 +1,6 @@
 body {
-    background: url(/uploads/images/bg.png) center center;
+    background: #222120;
+    /*background: url(/uploads/images/bg.png) center center;*/
     color: #a99877;
     /*color: #98a977;*/
     /*color: #7798a9;*/
@@ -7,7 +8,7 @@ body {
 }
 
 hr {
-    border-color: #0e0d0c;
+    border-color: #12110f;
 }
 
 h2, h3, h4, h5, h6 {
@@ -21,15 +22,16 @@ h2 {
     margin: 10px 0 20px;
     padding: 0 0 5px;
     font-size: 24px;
-    border-bottom: 3px solid #0e0d0c;
+    border-bottom: 3px solid #12110f;
 }
 
 a {
-    color: #d96500;
+    /*color: #d96500;*/
+    color: #fff;
 }
 
 a:hover {
-    color: #d96500;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -37,36 +39,37 @@ a:hover {
     color: #fff !important;
 }
 
-.header {
+.wrapper {
     background: #12110f;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.header, .content {
+    margin-bottom: 5px;
+}
+
+.header {
     text-align: center;
-    padding: 10px 10px 0;
     position: relative;
 }
 
-.content {
-    background: #12110f;
-    padding: 10px;
-}
-
-.content-inner {
+.inner {
     background: #222120;
     /*background: #40420E;*/
     padding: 10px;
     border-radius: 4px;
-
     border: 1px solid transparent;
     border-color: #080808;
 }
 
 .footer {
     color: #bbb;
-    padding: 10px;
     text-align: center;
 }
 
 .navbar-inverse {
-    background: #40420E;
+    background: #222120;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -76,6 +79,10 @@ a:hover {
 .navbar .form-control {
     background: #000;
     border-color: #444;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background: #222120;
 }
 
 .blackbox {
@@ -176,7 +183,7 @@ a.media {
     font-size: 18px;
     margin: 10px 0 10px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid #443312;
     text-transform: uppercase;
 }
 
@@ -186,7 +193,7 @@ a.media {
 }
 
 .well {
-    background: #0e0d0c;
+    background: #12110f;
     border-color: #443312;
     color: #a99877;
 }
@@ -199,7 +206,7 @@ a.well:hover {
 
 .box-img {
     display: block;
-    background: #0e0d0c;
+    background: #12110f;
     border: 1px solid #443312;
     margin-bottom: 20px;
     border-radius: 4px;

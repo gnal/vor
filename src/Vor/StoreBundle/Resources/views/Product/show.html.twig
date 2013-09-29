@@ -7,31 +7,16 @@
 <hr>
 <div class="row">
     <div class="col-md-6">
-        <p><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></p>
+        <p><img class="img-responsive" src="{{ product.images.first.pathname('filename', '0') }}" alt="0"></p>
     </div>
     <div class="col-md-6">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" class="box-img"><img class="img-responsive" src="http://placekitten.com/g/400/550" alt="0"></a>
-            </div>
-        </div>
+        {% for image in product.images %}
+            {% if loop.index == 1 or loop.index % 3 == 1 %}<div class="row">{% endif %}
+                <div class="col-md-4">
+                    <a href="#" class="box-img"><img class="img-responsive" src="{{ image.pathname('filename', '1') }}" alt="0"></a>
+                </div>
+            {% if loop.index == product.images|length or loop.index % 3 == 0 %}</div>{% endif %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
