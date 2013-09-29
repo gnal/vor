@@ -77,8 +77,8 @@ a:hover {
 }
 
 .navbar .form-control {
-    background: #000;
-    border-color: #444;
+    background: #12110f;
+    border-color: #443312;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -221,9 +221,9 @@ a.box-img:hover {
 }
 
 .btn-metal {
-    color: #000;
-    background-color: #444;
-    border-color: #000;
+    color: #fff;
+    background-color: #12110f;
+    border-color: #443312;
 }
 
 .btn-metal:hover,
@@ -231,7 +231,7 @@ a.box-img:hover {
 .btn-metal:active,
 .btn-metal.active,
 .open .dropdown-toggle.btn-metal {
-    color: #000;
-    background-color: #444;
-    border-color: #000;
+    color: #fff;
+    background-color: #12110f;
+    border-color: #443312;
 }
