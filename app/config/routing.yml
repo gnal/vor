@@ -1,3 +1,7 @@
+msi_page_show:
+    pattern: /{slug}
+    defaults: { _controller: MsiCmsBundle:Page:show, slug: ~ }
+
 msi_store:
     resource: "@MsiStoreBundle/Resources/config/routing.yml"
     prefix:   /
