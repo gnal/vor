@@ -25,6 +25,10 @@ h2 {
     border-bottom: 3px solid #12110f;
 }
 
+h3 {
+    font-size: 18px;
+}
+
 a {
     color: #d96500;
     /*color: #fff;*/
