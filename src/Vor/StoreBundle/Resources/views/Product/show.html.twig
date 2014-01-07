@@ -7,7 +7,7 @@
 <hr>
 <div class="row">
     <div class="col-md-6">
-        <p><img class="img-responsive" src="{{ product.images.first.pathname('filename', '0') }}" alt="0"></p>
+        <p><img class="img-responsive" src="{% if product.images.first %}{{ product.images.first.pathname('filename', '0') }}{% endif %}" alt="0"></p>
     </div>
     <div class="col-md-6">
         {% for image in product.images %}

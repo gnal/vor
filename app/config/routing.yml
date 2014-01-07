@@ -2,13 +2,13 @@ msi_store:
     resource: "@MsiStoreBundle/Resources/config/routing.yml"
     prefix:   /
 
+msi_search:
+    resource: "@MsiSearchBundle/Resources/config/routing.yml"
+    prefix:   /
+
 vor_core:
     resource: "@VorCoreBundle/Resources/config/routing.yml"
     prefix:   /
-
-homepage:
-    pattern:  /
-    defaults: { _controller: VorCoreBundle:Home:index }
 
 # fos_user
 

@@ -6,7 +6,7 @@ use Msi\StoreBundle\Model\Product as BaseProduct;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Vor\StoreBundle\Entity\ProductRepository")
  */
 class Product extends BaseProduct
 {

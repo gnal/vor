@@ -56,6 +56,7 @@ doctrine:
     orm:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
+        naming_strategy: msi_admin.doctrine.orm.naming_strategy
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -64,6 +65,13 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+fos_facebook:
+    alias:  facebook
+    app_id: 577531308995435504
+    secret: 062b442bac14e7d1548a9f22f959fb5f7e
+    cookie: true
+    permissions: [email, user_birthday, user_location]
 
 fos_user:
     db_driver: orm
@@ -74,9 +82,11 @@ fos_user:
     registration:
         form:
             type: msi_user_registration
+            validation_groups: [Default]
     profile:
         form:
             type: msi_user_profile
+            validation_groups: [Default]
     change_password:
         form:
             type: msi_user_change_password
@@ -88,3 +98,12 @@ msi_cms:
 
 msi_store:
     product_class: Vor\StoreBundle\Entity\Product
+
+msi_user:
+    roles:
+        ROLE_ADMIN: admin
+        ROLE_SUPER_ADMIN: super admin
+
+msi_search:
+    entities:
+        - "VorStoreBundle:Product"

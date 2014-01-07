@@ -1,8 +1,8 @@
 {% extends 'MsiAdminBundle:Page:layout.html.twig' %}
 
 {% block css %}
-<link href="{{ asset('bundles/msiadmin/vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ asset('bundles/msiadmin/vendor/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+<link href="{{ asset('bundles/vorcore/vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ asset('bundles/msiadmin/css/base.css') }}">
 <link rel="stylesheet" href="{{ asset('bundles/vorcore/css/style.css') }}">
@@ -25,9 +25,9 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     {{ knp_menu_render('VorCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
-                    <form class="navbar-form navbar-right">
+                    <form class="navbar-form navbar-right" method="GET" action="{{ path('msi_search_search_search') }}">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" name=q class="form-control" placeholder="Search">
                         </div>
                         <button type="submit" class="btn btn-metal"><span class="icon-search icon-large"></span></button>
                     </form>
@@ -66,5 +66,5 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 <script src="{{ asset('bundles/msiadmin/vendor/hinclude/hinclude.js') }}"></script>
-<script src="{{ asset('bundles/msiadmin/vendor/bootstrap/js/bootstrap.js') }}"></script>
+<script src="{{ asset('bundles/vorcore/vendor/bootstrap/js/bootstrap.js') }}"></script>
 {% endblock %}

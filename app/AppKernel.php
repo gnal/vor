@@ -23,18 +23,21 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new FOS\FacebookBundle\FOSFacebookBundle(),
 
             new Msi\AdminBundle\MsiAdminBundle(),
             new Msi\CmsBundle\MsiCmsBundle(),
             new Msi\UserBundle\MsiUserBundle(),
             new Msi\BaseBundle\MsiBaseBundle(),
             new Msi\StoreBundle\MsiStoreBundle(),
+            new Msi\SearchBundle\MsiSearchBundle(),
 
             new Acme\AppBundle\AcmeAppBundle(),
             new Vor\CoreBundle\VorCoreBundle(),
             new Vor\UserBundle\VorUserBundle(),
             new Vor\CmsBundle\VorCmsBundle(),
             new Vor\StoreBundle\VorStoreBundle(),
+            new Vor\SearchBundle\VorSearchBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

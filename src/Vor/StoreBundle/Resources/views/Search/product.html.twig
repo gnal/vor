@@ -1,0 +1,10 @@
+<div class="media">
+    <a class="pull-left" href="{{ path('msi_store_product_show', {'category': row.category.id, 'product': row.id}) }}">
+        <img class="img-responsive" src="{{ row.images.first ? row.images.first.pathname('filename', '64x64') : 'http://placekitten.com/64/64' }}" alt="0">
+    </a>
+    <div class="media-body">
+        <h3>{{ loop.index + (app.request.query.get('page', 1) * 10) - 10 }}. <a href="{{ path('msi_store_product_show', {'category': row.category.id, 'product': row.id}) }}">{{ row }}</a></h3>
+        {{ row.translation.content|striptags|truncate(150) }}
+    </div>
+</div>
+<hr>

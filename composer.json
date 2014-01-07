@@ -9,6 +9,7 @@
         { "type": "vcs", "url": "https://github.com/gnal/MsiCmsBundle.git" },
         { "type": "vcs", "url": "https://github.com/gnal/MsiBaseBundle.git" },
         { "type": "vcs", "url": "https://github.com/gnal/MsiCartBundle.git" },
+        { "type": "vcs", "url": "https://github.com/gnal/MsiSearchBundle.git" },
         { "type": "vcs", "url": "https://github.com/gnal/MsiUserBundle.git" }
     ],
     "require": {
@@ -29,12 +30,14 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "gedmo/doctrine-extensions": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
+        "friendsofsymfony/facebook-bundle": "1.2.*",
         "knplabs/knp-menu-bundle": "dev-master",
 
         "msi/admin-bundle": "dev-master",
         "msi/base-bundle": "dev-master",
         "msi/cms-bundle": "dev-master",
         "msi/store-bundle": "dev-master",
+        "msi/search-bundle": "dev-master",
         "msi/user-bundle": "dev-master"
     },
     "scripts": {
